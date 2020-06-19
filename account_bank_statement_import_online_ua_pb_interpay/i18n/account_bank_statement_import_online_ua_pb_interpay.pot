@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_bank_statement_import_online_ua_pb_interpay
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_online_ua_pb_interpay.online_bank_statement_provider_form
+msgid "API base"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:382
+#, python-format
+msgid "Authentication algorithm not specified"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:392
+#, python-format
+msgid "Authentication algorithm not supported: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:377
+#, python-format
+msgid "Authentication nonce not specified"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:404
+#, python-format
+msgid "Authentication qop not supported: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:374
+#, python-format
+msgid "Authentication realm not specified"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:48
+#, python-format
+msgid "Bank Account not linked or Account Number not set"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:90
+#, python-format
+msgid "Cannot convert \"%s\" (%s) to decimal"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_online_ua_pb_interpay.online_bank_statement_provider_form
+msgid "Certificate"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_online_ua_pb_interpay.online_bank_statement_provider_form
+msgid "Choose a file with certificate..."
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:348
+#, python-format
+msgid "Failed to perform handshake"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: model:ir.model,name:account_bank_statement_import_online_ua_pb_interpay.model_online_bank_statement_provider
+msgid "Online Bank Statement Provider"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_online_ua_pb_interpay.online_bank_statement_provider_form
+msgid "Passphrase"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_online_ua_pb_interpay.online_bank_statement_provider_form
+msgid "Password"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:278
+#, python-format
+msgid "Transaction amount not found: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:225
+#, python-format
+msgid "Transaction has no date: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:242
+#, python-format
+msgid "Transaction has no description: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:297
+#, python-format
+msgid "Transaction has no origin account: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:259
+#, python-format
+msgid "Transaction has no ref: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:315
+#, python-format
+msgid "Transaction has recipient bank account: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:493
+#, python-format
+msgid "Unknown error"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:356
+#, python-format
+msgid "Unsupported authentication method: %s"
+msgstr ""
+
+#. module: account_bank_statement_import_online_ua_pb_interpay
+#: model_terms:ir.ui.view,arch_db:account_bank_statement_import_online_ua_pb_interpay.online_bank_statement_provider_form
+msgid "Username"
+msgstr ""
+
