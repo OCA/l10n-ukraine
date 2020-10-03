@@ -1,5 +1,5 @@
 # Copyright 2019-2020 Brainbean Apps (https://brainbeanapps.com)
-# Copyright 2019-2020 Dataplug (https://dataplug.io)
+# Copyright 2020 CorporateHub (https://corporatehub.eu)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 {
@@ -8,9 +8,9 @@
         ' InterPay',
     'version': '12.0.1.0.0',
     'author':
-        'Brainbean Apps, '
-        'Dataplug, '
+        'CorporateHub, '
         'Odoo Community Association (OCA)',
+    'maintainers': ['alexey-pelykh'],
     'website': 'https://github.com/OCA/l10n-ukraine/',
     'license': 'AGPL-3',
     'category': 'Accounting',
