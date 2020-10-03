@@ -108,13 +108,14 @@ Credits
 Authors
 ~~~~~~~
 
-* Brainbean Apps
-* Dataplug
+* CorporateHub
 
 Contributors
 ~~~~~~~~~~~~
 
-* Alexey Pelykh <alexey.pelykh@brainbeanapps.com>
+* `CorporateHub <https://corporatehub.eu/>`__
+
+  * Alexey Pelykh <alexey.pelykh@corphub.eu>
 
 Maintainers
 ~~~~~~~~~~~
@@ -128,6 +129,14 @@ This module is maintained by the OCA.
 OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
+
+.. |maintainer-alexey-pelykh| image:: https://github.com/alexey-pelykh.png?size=40px
+    :target: https://github.com/alexey-pelykh
+    :alt: alexey-pelykh
+
+Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+
+|maintainer-alexey-pelykh| 
 
 This module is part of the `OCA/l10n-ukraine <https://github.com/OCA/l10n-ukraine/tree/12.0/account_bank_statement_import_online_ua_pb_interpay>`_ project on GitHub.
 
