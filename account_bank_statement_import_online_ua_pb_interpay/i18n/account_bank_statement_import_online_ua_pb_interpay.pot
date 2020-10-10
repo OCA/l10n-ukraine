@@ -19,31 +19,31 @@ msgid "API base"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:382
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:427
 #, python-format
 msgid "Authentication algorithm not specified"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:392
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:437
 #, python-format
 msgid "Authentication algorithm not supported: %s"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:377
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:422
 #, python-format
 msgid "Authentication nonce not specified"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:404
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:449
 #, python-format
 msgid "Authentication qop not supported: %s"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:374
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:419
 #, python-format
 msgid "Authentication realm not specified"
 msgstr ""
@@ -55,7 +55,7 @@ msgid "Bank Account not linked or Account Number not set"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:90
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:101
 #, python-format
 msgid "Cannot convert \"%s\" (%s) to decimal"
 msgstr ""
@@ -71,7 +71,7 @@ msgid "Choose a file with certificate..."
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:348
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:393
 #, python-format
 msgid "Failed to perform handshake"
 msgstr ""
@@ -92,49 +92,49 @@ msgid "Password"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:278
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:323
 #, python-format
 msgid "Transaction amount not found: %s"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:225
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:270
 #, python-format
 msgid "Transaction has no date: %s"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:242
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:287
 #, python-format
 msgid "Transaction has no description: %s"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:297
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:342
 #, python-format
 msgid "Transaction has no origin account: %s"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:259
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:304
 #, python-format
 msgid "Transaction has no ref: %s"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:315
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:360
 #, python-format
 msgid "Transaction has recipient bank account: %s"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:493
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:538
 #, python-format
 msgid "Unknown error"
 msgstr ""
 
 #. module: account_bank_statement_import_online_ua_pb_interpay
-#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:356
+#: code:addons/account_bank_statement_import_online_ua_pb_interpay/models/online_bank_statement_provider_ua_pb_interpay.py:401
 #, python-format
 msgid "Unsupported authentication method: %s"
 msgstr ""
