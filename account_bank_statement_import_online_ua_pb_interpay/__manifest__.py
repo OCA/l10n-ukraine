@@ -6,7 +6,7 @@
     'name':
         'Online Bank Statements: PrivatBank Ukraine (ПриватБанк Україна)'
         ' InterPay',
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.1.0',
     'author':
         'CorporateHub, '
         'Odoo Community Association (OCA)',
