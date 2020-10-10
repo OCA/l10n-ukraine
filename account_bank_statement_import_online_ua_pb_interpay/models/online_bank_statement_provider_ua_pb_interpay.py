@@ -52,12 +52,20 @@ class OnlineBankStatementProviderUaPbInterpay(models.Model):
         if date_until.tzinfo:
             date_until = date_until.astimezone(utc).replace(tzinfo=None)
 
+        balance_start, balance_end = self._ua_pb_interpal_get_balance(
+            date_since,
+            date_until,
+        )
+
         transactions = self._ua_pb_interpal_get_transactions(
             date_since,
             date_until,
         )
         if not transactions:
-            return None
+            return [], {
+                'balance_start': balance_start,
+                'balance_end_real': balance_end,
+            }
 
         # Normalize transactions, sort by date, and get lines
         transactions = list(sorted(
@@ -71,7 +79,10 @@ class OnlineBankStatementProviderUaPbInterpay(models.Model):
             transactions
         )))
 
-        return lines, {}
+        return lines, {
+            'balance_start': balance_start,
+            'balance_end_real': balance_end,
+        }
 
     @api.model
     def _ua_pb_interpay_string(self, value):
@@ -136,6 +147,40 @@ class OnlineBankStatementProviderUaPbInterpay(models.Model):
                 'account_number': partner_account,
             })
         return [line]
+
+    @api.multi
+    def _ua_pb_interpal_get_balance(self, since, until):
+        self.ensure_one()
+
+        one_day = relativedelta(days=1)
+
+        data = self._ua_pb_interpay_retrieve('/payment/report', {
+            'from': int(since.timestamp()) * 1000,
+            'to': int(min(since + one_day, until).timestamp()) * 1000,
+            'pagination': {
+                'page': 0,
+                'per': 1,
+            },
+        })
+        balance_start = next(filter(
+            lambda turnover: turnover['acc'] == self.account_number,
+            data['accountTurnovers']
+        ))['startBalance']
+
+        data = self._ua_pb_interpay_retrieve('/payment/report', {
+            'from': int(max(until - one_day, since).timestamp()) * 1000,
+            'to': int(until.timestamp()) * 1000,
+            'pagination': {
+                'page': 0,
+                'per': 1,
+            },
+        })
+        balance_end = next(filter(
+            lambda turnover: turnover['acc'] == self.account_number,
+            data['accountTurnovers']
+        ))['endBalance']
+
+        return balance_start, balance_end
 
     @api.multi
     def _ua_pb_interpal_get_transactions(self, since, until):
