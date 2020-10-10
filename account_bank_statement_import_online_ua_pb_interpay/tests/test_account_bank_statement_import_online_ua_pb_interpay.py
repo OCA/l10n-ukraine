@@ -61,7 +61,15 @@ class TestAccountBankAccountStatementImportOnlineUaPbInterpay(
         "page": 0,
         "per": 1000,
         "total": 1
-    }
+    },
+    "accountTurnovers": [
+        {
+            "acc": "12345678910",
+            "ccy": "EUR",
+            "startBalance": 0.0,
+            "endBalance": 0.0
+        }
+    ]
 }""", parse_float=Decimal)
         with mock.patch(
             _provider_class + '._ua_pb_interpay_retrieve',
@@ -72,7 +80,11 @@ class TestAccountBankAccountStatementImportOnlineUaPbInterpay(
                 self.now,
             )
 
-        self.assertIsNone(data)
+        self.assertFalse(data[0])
+        self.assertEqual(data[1], {
+            'balance_start': 0.0,
+            'balance_end_real': 0.0,
+        })
 
     def test_pull(self):
         bank_account = self.ResPartnerBank.create({
@@ -126,7 +138,15 @@ class TestAccountBankAccountStatementImportOnlineUaPbInterpay(
         "page": 0,
         "per": 1000,
         "total": 1
-    }
+    },
+    "accountTurnovers": [
+        {
+            "acc": "19190000000000",
+            "ccy": "EUR",
+            "startBalance": 10000.0,
+            "endBalance": 21443.5
+        }
+    ]
 }""", parse_float=Decimal)
         with mock.patch(
             _provider_class + '._ua_pb_interpay_retrieve',
@@ -152,4 +172,8 @@ class TestAccountBankAccountStatementImportOnlineUaPbInterpay(
             'name': 'DESCRIPTION',
             'partner_name': 'Petro PETRENKO',
             'unique_import_id': 'P12345-1581575325',
+        })
+        self.assertEqual(data[1], {
+            'balance_start': 10000.0,
+            'balance_end_real': 21443.5,
         })
