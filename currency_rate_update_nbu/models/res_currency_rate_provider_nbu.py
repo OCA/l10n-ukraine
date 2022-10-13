@@ -98,7 +98,7 @@ class ResCurrencyRateProviderNBU(models.Model):
             "XPD",
         ]
 
-    def _process_request(self, url, params=None, headers=None):
+    def _nbu_process_request(self, url, params=None, headers=None):
         try:
             response = requests.get(url=url, params=params, headers=headers, timeout=60)
             response_data = json.loads(response.text)
@@ -122,7 +122,7 @@ class ResCurrencyRateProviderNBU(models.Model):
         """
         content = defaultdict(dict)
         url = "https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json"
-        data = self._process_request(url)
+        data = self._nbu_process_request(url)
         for line in data:
             currency = line.get("cc")
             if currency in currencies:

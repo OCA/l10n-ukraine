@@ -9,7 +9,7 @@
     "summary": "Allows to download currency exchange rates from "
     "National Bank of Ukraine",
     "author": "Garazd Creation," "Odoo Community Association (OCA),",
-    "website": "https://github.com/OCA/currency",
+    "website": "https://github.com/OCA/l10n-ukraine",
     "license": "AGPL-3",
     "depends": [
         "currency_rate_update",
