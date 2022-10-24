@@ -55,14 +55,15 @@ class ResCurrencyRateProviderNBU(models.Model):
         return response_data
 
     def _nbu_get_available_currencies(self):
-        """ Get available currency list from NBU.
+        """Get available currency list from NBU.
         :return: list of currency codes
         """
         data = self._nbu_process_request()
         return [cur["cc"] for cur in data]
 
-    def _nbu_get_rate(self, currencies: List,
-                      date_from, date_to, invert_calculation=True):
+    def _nbu_get_rate(
+        self, currencies: List, date_from, date_to, invert_calculation=True
+    ):
         """Get currency rates from NBU.
         :param currencies: list or currency codes to return
         :param date_from: date from which rates will be given
