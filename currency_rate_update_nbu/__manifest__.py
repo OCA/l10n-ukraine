@@ -8,7 +8,7 @@
     "category": "Accounting & Finance",
     "summary": "Allows to download currency exchange rates from "
     "National Bank of Ukraine",
-    "author": "Garazd Creation," "Odoo Community Association (OCA),",
+    "author": "Garazd Creation, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/l10n-ukraine",
     "license": "AGPL-3",
     "depends": [
@@ -16,6 +16,7 @@
     ],
     "data": [
         "data/res_currency_rate_provider_data.xml",
+        "data/ir_config_parameter_data.xml",
     ],
     "installable": True,
 }
