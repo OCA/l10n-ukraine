@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="param_currency_rate_provider_nbu" model="ir.config_parameter" forcecreate="True">
+        <field name="key">currency_rate_update_nbu.api_url</field>
+        <field name="value">https://bank.gov.ua/NBU_Exchange/exchange_site?json</field>
+    </record>
+
+</odoo>
