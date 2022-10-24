@@ -6,10 +6,9 @@ This module provides base for building exchange rates providers and bundles
 following built-in providers:
 
  * **National Bank of Ukraine**:
-   the official currency rate of the Ukrainian hryvnia to foreign currencies
-   on the current date. Source in UAH, for more details see `corresponding
-   NBU page <https://bank.gov.ua/ua/open-data/api-dev>`_ the link "Rate for
-   the current date".
+   the official currency rate of the Ukrainian hryvnia to foreign currencies.
+   Source in UAH, for more details see `corresponding
+   NBU page <https://bank.gov.ua/ua/open-data/api-dev>`_.
 
 This module is compatible with ``currency_rate_inverted`` module provided by
 OCA, that allows to maintain exchange rates in inverted format, helping to
@@ -43,7 +42,7 @@ To update historical currency rates:
 # Select the "National Bank of Ukraine" provider
 # Add or remove available currencies if you need.
 # Launch *Actions > Update Rates Wizard*
-# Click *Update*
+# Configure date interval and click *Update*
 
 Bug Tracker
 ===========
