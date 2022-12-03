@@ -4,7 +4,7 @@
 
 {
     "name": "Currency Rate Update NBU",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Accounting & Finance",
     "summary": "Allows to download currency exchange rates from "
     "National Bank of Ukraine",
