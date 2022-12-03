@@ -37,8 +37,9 @@ class ResCurrencyRateProviderNBU(models.Model):
 
     def _nbu_process_request(self, params=None, headers=None):
         try:
-            url = self.env[
-                "ir.config_parameter"].get_param("currency_rate_update_nbu.api_url")
+            url = self.env["ir.config_parameter"].get_param(
+                "currency_rate_update_nbu.api_url"
+            )
             response = requests.get(url=url, params=params, headers=headers, timeout=60)
             response_data = json.loads(response.text)
             if response.status_code != 200:
@@ -54,14 +55,15 @@ class ResCurrencyRateProviderNBU(models.Model):
         return response_data
 
     def _nbu_get_available_currencies(self):
-        """ Get available currency list from NBU.
+        """Get available currency list from NBU.
         :return: list of currency codes
         """
         data = self._nbu_process_request()
-        return [cur['cc'] for cur in data]
+        return [cur["cc"] for cur in data]
 
-    def _nbu_get_rate(self, currencies: List,
-                      date_from, date_to, invert_calculation=True):
+    def _nbu_get_rate(
+        self, currencies: List, date_from, date_to, invert_calculation=True
+    ):
         """Get currency rates from NBU.
         :param currencies: list or currency codes to return
         :param date_from: date from which rates will be given
@@ -70,10 +72,10 @@ class ResCurrencyRateProviderNBU(models.Model):
         """
         content = defaultdict(dict)
         params = {
-            'start': date_from.strftime('%Y%m%d'),
-            'end': date_to.strftime('%Y%m%d'),
-            'sort': 'exchangedate',
-            'order': 'asc',
+            "start": date_from.strftime("%Y%m%d"),
+            "end": date_to.strftime("%Y%m%d"),
+            "sort": "exchangedate",
+            "order": "asc",
         }
         data = self._nbu_process_request(params=params)
         for line in data:
@@ -99,5 +101,4 @@ class ResCurrencyRateProviderNBU(models.Model):
             )
         if float_compare(self.env.ref("base.UAH").rate, 1.0, precision_digits=12) != 0:
             raise UserError(_("The base company currency rate should be equal to 1.0"))
-        return self._nbu_get_rate(
-            self.currency_ids.mapped("name"), date_from, date_to)
+        return self._nbu_get_rate(self.currency_ids.mapped("name"), date_from, date_to)
