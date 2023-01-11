@@ -48,7 +48,7 @@ class ResCurrencyRateProviderNBU(models.Model):
                         "Failed to fetch from https://bank.gov.ua/ "
                         "with error code: %(code)s and error message: %(msg)s"
                     )
-                    % {'code': response.status_code, 'msg': response.reason}
+                    % {"code": response.status_code, "msg": response.reason}
                 )
         except (ConnectionError, Timeout, TooManyRedirects) as e:
             raise Exception(str(e))
