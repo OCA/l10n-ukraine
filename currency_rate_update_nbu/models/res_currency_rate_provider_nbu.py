@@ -51,7 +51,7 @@ class ResCurrencyRateProviderNBU(models.Model):
                     % {"code": response.status_code, "msg": response.reason}
                 )
         except (ConnectionError, Timeout, TooManyRedirects) as e:
-            raise Exception(str(e))
+            raise Exception(str(e)) from e
         return response_data
 
     def _nbu_get_available_currencies(self):
