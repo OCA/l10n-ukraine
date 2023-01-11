@@ -6,5 +6,4 @@ To enable scheduled currency rates update:
 To configure currency rates providers:
 
 #. Go to *Invoicing > Configuration > Currency Rates Providers*
-#. The default NBU provider will be added during module installation with two
-available currencies: USD, EUR.
+#. The default NBU provider will be added during module installation with two available currencies: USD, EUR.
