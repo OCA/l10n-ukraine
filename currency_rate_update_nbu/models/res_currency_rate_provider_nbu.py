@@ -101,4 +101,4 @@ class ResCurrencyRateProviderNBU(models.Model):
             )
         if float_compare(self.env.ref("base.UAH").rate, 1.0, precision_digits=12) != 0:
             raise UserError(_("The base company currency rate should be equal to 1.0"))
-        return self._nbu_get_rate(self.currency_ids.mapped("name"), date_from, date_to)
+        return self._nbu_get_rate(currencies, date_from, date_to)
