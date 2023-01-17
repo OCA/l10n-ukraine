@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <notebook colspan="4" position="inside">
+                <page
+                    string="Partner Requisites"
+                    attrs="{'invisible': [('is_company','=', False)]}"
+                >
+                    <group>
+                        <group>
+                            <field name="ua_legal_name" placeholder="XYZ Ltd" />
+                            <field name="ua_legal_short_name" placeholder="XYZ Ltd" />
+                            <field
+                                name="ua_director_id"
+                                domain="[('parent_id','child_of',id),('id','!=', id)]"
+                            />
+                            <field name="ua_director_reason" />
+                            <field
+                                name="ua_director_accountant_id"
+                                domain="[('parent_id','child_of',id),('id','!=', id)]"
+                            />
+                            <field
+                                name="ua_responsible_id"
+                                domain="[('parent_id','child_of',id),('id','!=', id)]"
+                            />
+                            <field
+                                name="ua_legal_address"
+                                domain="[('parent_id','child_of',id),('id','!=', id)]"
+                            />
+                            <field
+                                name="ua_postal_address"
+                                domain="[('parent_id','child_of',id),('id','!=', id)]"
+                            />
+                        </group>
+                        <group>
+                            <field name="ua_enterprise_code" />
+                            <field name="ua_tin" />
+                            <field name="ua_vat_certificate" />
+                        </group>
+                    </group>
+                    <field
+                        name="ua_requisites_ids"
+                        context="{'default_partner_id': id}"
+                    >
+                        <tree>
+                            <field name="date" />
+                            <field name="ua_legal_name" />
+                            <field name="ua_legal_short_name" />
+                            <field name="ua_director_id" />
+                            <field name="ua_director_reason" />
+                            <field name="ua_director_accountant_id" />
+                            <field name="ua_responsible_id" />
+                            <field name="ua_enterprise_code" />
+                            <field name="ua_tin" />
+                            <field name="ua_vat_certificate" />
+                        </tree>
+                        <form>
+                            <group>
+                                <group>
+                                    <field
+                                        name="partner_id"
+                                        readonly="context.get('default_partner_id')"
+                                    />
+                                    <field name="date" />
+                                    <field name="ua_legal_name" placeholder="XYZ Ltd" />
+                                    <field
+                                        name="ua_legal_short_name"
+                                        placeholder="XYZ Ltd"
+                                    />
+                                    <field
+                                        name="ua_director_id"
+                                        domain="[('parent_id','child_of',partner_id),('id','!=', partner_id)]"
+                                    />
+                                    <field name="ua_director_reason" />
+                                    <field
+                                        name="ua_director_accountant_id"
+                                        domain="[('parent_id','child_of',partner_id),('id','!=', partner_id)]"
+                                    />
+                                    <field
+                                        name="ua_responsible_id"
+                                        domain="[('parent_id','child_of',partner_id),('id','!=', partner_id)]"
+                                    />
+                                    <field
+                                        name="ua_legal_address"
+                                        domain="[('parent_id','child_of',partner_id),('id','!=', partner_id)]"
+                                    />
+                                    <field
+                                        name="ua_postal_address"
+                                        domain="[('parent_id','child_of',partner_id),('id','!=', partner_id)]"
+                                    />
+                                </group>
+                                <group>
+                                    <field name="ua_enterprise_code" />
+                                    <field name="ua_tin" />
+                                    <field name="ua_vat_certificate" />
+                                </group>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="ua_enterprise_code" />
+            </field>
+        </field>
+    </record>
+
+
+    <!-- Partner Kanban View -->
+    <record model="ir.ui.view" id="res_partner_kanban_view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.res_partner_kanban_view" />
+        <field name="arch" type="xml">
+            <data>
+                <xpath expr="/kanban/field[@name='display_name']" position="after">
+                    <field name="ua_enterprise_code" />
+                </xpath>
+                <xpath
+                    expr="/kanban/templates/t[@t-name='kanban-box']/div/div[hasclass('oe_kanban_details')]/strong/field[@name='display_name']"
+                    position="before"
+                >
+                    <t t-if="record.ua_enterprise_code.raw_value">[<field
+                            name="ua_enterprise_code"
+                        />]
+                    </t>
+                </xpath>
+            </data>
+        </field>
+    </record>
+</odoo>
