@@ -1,0 +1,4 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_res_partner_ua_requisites_account_manager","access_res_partner_ua_requisites","model_res_partner_ua_requisites","account.group_account_manager",1,1,1,1
+"access_res_partner_ua_requisites_account_user","access_res_partner_ua_requisites","model_res_partner_ua_requisites","account.group_account_user",1,1,1,0
+"access_res_partner_ua_requisites_user","access_res_partner_ua_requisites","model_res_partner_ua_requisites","base.group_user",1,0,0,0
