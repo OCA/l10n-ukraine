@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="l10n_ua_hr_job_classification_view_form" model="ir.ui.view">
+        <field name="name">l10n.ua.hr.job.classification.view.form</field>
+        <field name="model">l10n.ua.hr.job.classification</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        invisible="active"
+                    />
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Software Engineer" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code" />
+                            <field name="profession_classifier_catalog_id" />
+                        </group>
+                        <group>
+                            <field name="active" invisible="1" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field
+                                name="description"
+                                placeholder="Classification description..."
+                            />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_ua_hr_job_classification_view_list" model="ir.ui.view">
+        <field name="name">l10n.ua.hr.job.classification.view.list</field>
+        <field name="model">l10n.ua.hr.job.classification</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="code" />
+                <field name="name" />
+                <field name="profession_classifier_catalog_id" optional="show" />
+            </list>
+        </field>
+    </record>
+
+    <record id="l10n_ua_hr_job_classification_view_search" model="ir.ui.view">
+        <field name="name">l10n.ua.hr.job.classification.view.search</field>
+        <field name="model">l10n.ua.hr.job.classification</field>
+        <field name="arch" type="xml">
+            <search>
+                <field
+                    name="name"
+                    filter_domain="['|', ('name', 'ilike', self), ('code', 'ilike', self)]"
+                />
+                <field name="code" />
+                <field name="profession_classifier_catalog_id" />
+                <filter
+                    string="Archived"
+                    name="inactive"
+                    domain="[('active', '=', False)]"
+                />
+                <group string="Group By">
+                    <filter
+                        string="Catalog"
+                        name="group_catalog"
+                        context="{'group_by': 'profession_classifier_catalog_id'}"
+                    />
+                    <filter
+                        string="KP Code"
+                        name="group_code"
+                        context="{'group_by': 'code'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="l10n_ua_hr_job_classification_view_kanban" model="ir.ui.view">
+        <field name="name">l10n.ua.hr.job.classification.view.kanban</field>
+        <field name="model">l10n.ua.hr.job.classification</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name" />
+                <field name="code" />
+                <field name="profession_classifier_catalog_id" />
+                <templates>
+                    <t t-name="card">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_record_top">
+                                <div class="o_kanban_record_headings">
+                                    <strong class="o_kanban_record_title">
+                                        <field name="name" />
+                                    </strong>
+                                    <span class="o_kanban_record_subtitle text-muted">
+                                        KP
+                                        <field name="code" />
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                t-if="record.profession_classifier_catalog_id.raw_value"
+                                class="o_kanban_record_body"
+                            >
+                                <field name="profession_classifier_catalog_id" />
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="l10n_ua_hr_job_classification_action" model="ir.actions.act_window">
+        <field name="name">Job Classifications</field>
+        <field name="res_model">l10n.ua.hr.job.classification</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="search_view_id" ref="l10n_ua_hr_job_classification_view_search" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first job classification
+            </p>
+            <p>
+                The catalog is preloaded with the Ukrainian Classifier
+                of Occupations ДК 003:2010.
+            </p>
+        </field>
+    </record>
+
+    <record id="l10n_ua_hr_job_classification_catalog_view_form" model="ir.ui.view">
+        <field name="name">l10n.ua.hr.job.classification.catalog.view.form</field>
+        <field name="model">l10n.ua.hr.job.classification.catalog</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="bg-danger"
+                        invisible="active"
+                    />
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_classifications"
+                            icon="fa-list"
+                        >
+                            <field name="pc_count" widget="statinfo" />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Programmers" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="code" />
+                            <field name="parent_id" />
+                        </group>
+                        <group>
+                            <field name="complete_name" />
+                            <field name="active" invisible="1" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Sub-Catalogs" name="children">
+                            <field name="child_ids">
+                                <list>
+                                    <field name="code" />
+                                    <field name="name" />
+                                    <field name="complete_name" optional="hide" />
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Classifications" name="classifiers">
+                            <field name="profession_classifier_ids">
+                                <list>
+                                    <field name="code" />
+                                    <field name="name" />
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_ua_hr_job_classification_catalog_view_list" model="ir.ui.view">
+        <field name="name">l10n.ua.hr.job.classification.catalog.view.list</field>
+        <field name="model">l10n.ua.hr.job.classification.catalog</field>
+        <field name="arch" type="xml">
+            <list default_order="code">
+                <field name="code" />
+                <field name="name" />
+                <field name="pc_count" string="# Classifications" />
+            </list>
+        </field>
+    </record>
+
+    <record id="l10n_ua_hr_job_classification_catalog_view_search" model="ir.ui.view">
+        <field name="name">l10n.ua.hr.job.classification.catalog.view.search</field>
+        <field name="model">l10n.ua.hr.job.classification.catalog</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" string="Name or Code" />
+                <field name="code" />
+                <field name="parent_id" />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Parent Catalog"
+                        name="group_parent"
+                        context="{'group_by': 'parent_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record
+        id="l10n_ua_hr_job_classification_catalog_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Job Classification Categories</field>
+        <field name="res_model">l10n.ua.hr.job.classification.catalog</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('parent_id', '!=', False)]</field>
+        <field
+            name="search_view_id"
+            ref="l10n_ua_hr_job_classification_catalog_view_search"
+        />
+        <field name="context">{'search_default_group_parent': 1}</field>
+    </record>
+
+    <menuitem
+        id="menu_l10n_ua_hr_job_classification_root"
+        name="Classifications"
+        parent="hr.menu_human_resources_configuration"
+        sequence="50"
+    />
+
+    <menuitem
+        id="menu_l10n_ua_hr_job_classification"
+        name="Job Classifications"
+        parent="menu_l10n_ua_hr_job_classification_root"
+        action="l10n_ua_hr_job_classification_action"
+        sequence="10"
+    />
+
+    <menuitem
+        id="menu_l10n_ua_hr_job_classification_catalog"
+        name="Job Classification Categories"
+        parent="menu_l10n_ua_hr_job_classification_root"
+        action="l10n_ua_hr_job_classification_catalog_action"
+        sequence="20"
+    />
+</odoo>

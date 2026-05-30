@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_l10n_ua_hr_job_classification_user,l10n.ua.hr.job.classification user,model_l10n_ua_hr_job_classification,base.group_user,1,0,0,0
+access_l10n_ua_hr_job_classification_hr_manager,l10n.ua.hr.job.classification hr manager,model_l10n_ua_hr_job_classification,hr.group_hr_manager,1,1,1,1
+access_l10n_ua_hr_job_classification_catalog_user,l10n.ua.hr.job.classification.catalog user,model_l10n_ua_hr_job_classification_catalog,base.group_user,1,0,0,0
+access_l10n_ua_hr_job_classification_catalog_hr_manager,l10n.ua.hr.job.classification.catalog hr manager,model_l10n_ua_hr_job_classification_catalog,hr.group_hr_manager,1,1,1,1
