@@ -2,214 +2,203 @@
 # This file contains the translation of the following modules:
 # 	* l10n_ua_hr_job_classifier
 #
-# Translators:
-# Olha Holodaieva, 2026
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-29 17:37+0000\n"
-"PO-Revision-Date: 2026-05-29 17:37+0000\n"
-"Last-Translator: Olga Golodaeva, 2026\n"
-"Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
-"Language: uk\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n %% 1 == 0 && n %% 10 == 1 && n %% 100 != "
-"11 ? 0 : n %% 1 == 0 && n %% 10 >= 2 && n %% 10 <= 4 && (n %% 100 < 12 || n %"
-"% 100 > 14) ? 1 : n %% 1 == 0 && (n %% 10 ==0 || (n %% 10 >=5 && n %% 10 "
-"<=9) || (n %% 100 >=11 && n %% 100 <=14 )) ? 2: 3);\n"
+"Plural-Forms: \n"
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_view_list
 msgid "# Classifications"
-msgstr "Кількість класифікацій"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__pc_count
 msgid "# Profession Classifier"
-msgstr "Кількість професій"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__active
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__active
 msgid "Active"
-msgstr "Активний"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_view_form
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_form
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_search
 msgid "Archived"
-msgstr "Архівовано"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_search
 msgid "Catalog"
-msgstr "Каталог"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__child_ids
 msgid "Children"
-msgstr "Дочірні елементи"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_form
 msgid "Classification description..."
-msgstr "Опис класифікації..."
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.ui.menu,name:l10n_ua_hr_job_classifier.menu_l10n_ua_hr_job_classification_root
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_view_form
 msgid "Classifications"
-msgstr "Класифікації"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__code
 msgid "Code"
-msgstr "Код"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__complete_code
 msgid "Complete Code"
-msgstr "Повний код"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__complete_name
 msgid "Complete Name"
-msgstr "Повна назва"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.actions.act_window,help:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_action
 msgid "Create your first job classification"
-msgstr "Створіть першу класифікацію професії"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__create_uid
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__create_uid
 msgid "Created by"
-msgstr "Створив"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__create_date
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__create_date
 msgid "Created on"
-msgstr "Створено"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,help:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__code
 msgid "DK 003:2010 profession code (Класифікатор професій)"
-msgstr "Код професії за класифікатором ДК 003:2010"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__description
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_form
 msgid "Description"
-msgstr "Опис"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__display_name
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__display_name
 msgid "Display Name"
-msgstr "Відображувана назва"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_view_search
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_search
 msgid "Group By"
-msgstr "Групувати за"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__id
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model,name:l10n_ua_hr_job_classifier.model_l10n_ua_hr_job_classification
 msgid "Job Classification"
-msgstr "Класифікація професій"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model,name:l10n_ua_hr_job_classifier.model_l10n_ua_hr_job_classification_catalog
-#, fuzzy
 msgid "Job Classification Catalog"
-msgstr "Категорії класифікації професій"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.actions.act_window,name:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_action
 #: model:ir.ui.menu,name:l10n_ua_hr_job_classifier.menu_l10n_ua_hr_job_classification_catalog
 msgid "Job Classification Categories"
-msgstr "Категорії класифікації професій"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.actions.act_window,name:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_action
 #: model:ir.ui.menu,name:l10n_ua_hr_job_classifier.menu_l10n_ua_hr_job_classification
 msgid "Job Classifications"
-msgstr "Класифікації професій"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_kanban
 msgid "KP"
-msgstr "КП"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__code
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_search
 msgid "KP Code"
-msgstr "Код КП"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__write_uid
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__write_uid
 msgid "Last Updated by"
-msgstr "Останнє оновлення зробив"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__write_date
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__write_date
 msgid "Last Updated on"
-msgstr "Останнє оновлення"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__name
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__name
 msgid "Name"
-msgstr "Назва"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_view_search
 msgid "Name or Code"
-msgstr "Назва або код"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__parent_id
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_view_search
 msgid "Parent Catalog"
-msgstr "Батьківський каталог"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__parent_path
 msgid "Parent Path"
-msgstr "Шлях батьківського елемента"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__profession_classifier_ids
-#, fuzzy
 msgid "Profession Classifier"
-msgstr "Класифікатори професій"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,field_description:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification__profession_classifier_catalog_id
-#, fuzzy
 msgid "Profession Classifier Catalog"
-msgstr "Класифікатори професій"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_view_form
 msgid "Sub-Catalogs"
-msgstr "Підкаталоги"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.actions.act_window,help:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_action
@@ -217,8 +206,6 @@ msgid ""
 "The catalog is preloaded with the Ukrainian Classifier\n"
 "                of Occupations ДК 003:2010."
 msgstr ""
-"Каталог попередньо завантажений Українським класифікатором\n"
-"                професій ДК 003:2010."
 
 #. module: l10n_ua_hr_job_classifier
 #: model:ir.model.fields,help:l10n_ua_hr_job_classifier.field_l10n_ua_hr_job_classification_catalog__pc_count
@@ -226,24 +213,19 @@ msgid ""
 "The number of Profession Classifiers under this category (includes children "
 "categories)."
 msgstr ""
-"Кількість класифікаторів професій у цій категорії (включаючи дочірні "
-"категорії)."
 
 #. module: l10n_ua_hr_job_classifier
 #. odoo-python
 #: code:addons/l10n_ua_hr_job_classifier/models/l10n_ua_hr_job_classification.py:0
 msgid "You cannot create recursive catalog."
-msgstr "Неможливо створити рекурсивний каталог."
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_catalog_view_form
 msgid "e.g. Programmers"
-msgstr "напр. Програмісти"
+msgstr ""
 
 #. module: l10n_ua_hr_job_classifier
 #: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classifier.l10n_ua_hr_job_classification_view_form
 msgid "e.g. Software Engineer"
-msgstr "напр. Інженер-програміст"
-
-#~ msgid "Catalog Profession Classifier"
-#~ msgstr "Каталог класифікатора професій"
+msgstr ""
