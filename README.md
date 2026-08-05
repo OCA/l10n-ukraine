@@ -17,7 +17,11 @@ l10n-ukraine
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[l10n_ua_hr_job_classifier](l10n_ua_hr_job_classifier/) | 18.0.1.0.0 | <a href='https://github.com/PeleOlala'><img src='https://github.com/PeleOlala.png' width='32' height='32' style='border-radius:50%;' alt='PeleOlala'/></a> | Ukrainian National Classifier of Occupations DK 003:2010
 
 [//]: # (end addons)
 

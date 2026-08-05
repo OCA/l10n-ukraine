@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-oca-l10n-ukraine"
+version = "18.0.20260805.0"
+dependencies = [
+    "odoo-addon-l10n_ua_hr_job_classifier==18.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 18.0",
+]
