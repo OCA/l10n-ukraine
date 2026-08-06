@@ -90,17 +90,31 @@ class ProfessionClassifierCatalog(models.Model):
 
     @api.depends("profession_classifier_ids")
     def _compute_job_classification_count(self):
+        # Aggregate classifications per catalog with a single _read_group
+        # across all descendants of ``self`` (bounded by parent_path).
         read_group_res = self.env["l10n.ua.hr.job.classification"]._read_group(
             [("profession_classifier_catalog_id", "child_of", self.ids)],
             ["profession_classifier_catalog_id"],
             ["__count"],
         )
-        group_data = {catalog.id: count for catalog, count in read_group_res}
+        counts_by_id = {catalog.id: count for catalog, count in read_group_res}
+        if not counts_by_id:
+            for categ in self:
+                categ.pc_count = 0
+            return
+        # Resolve subtree membership via parent_path prefix match — the
+        # tree store is already there thanks to _parent_store = True, so
+        # no extra SQL search is needed per record in self.
+        contrib_paths = {
+            rec.id: rec.parent_path or "" for rec in self.browse(counts_by_id.keys())
+        }
         for categ in self:
-            count = 0
-            for sub_id in categ.search([("id", "child_of", categ.ids)]).ids:
-                count += group_data.get(sub_id, 0)
-            categ.pc_count = count
+            prefix = categ.parent_path or ""
+            categ.pc_count = sum(
+                count
+                for cat_id, count in counts_by_id.items()
+                if contrib_paths[cat_id].startswith(prefix)
+            )
 
     @api.depends("complete_name", "name")
     @api.depends_context("hierarchical_naming")
