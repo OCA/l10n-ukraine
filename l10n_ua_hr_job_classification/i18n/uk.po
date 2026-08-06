@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_ua_hr_job_classification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-06 17:26+0000\n"
+"PO-Revision-Date: 2026-08-06 17:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=(n %% 1 == 0 && n %% 10 == 1 && n %% 100 != 11 ? 0 : n %% 1 == 0 && n %% 10 >= 2 && n %% 10 <= 4 && (n %% 100 < 12 || n %% 100 > 14) ? 1 : n %% 1 == 0 && (n %% 10 ==0 || (n %% 10 >=5 && n %% 10 <=9) || (n %% 100 >=11 && n %% 100 <=14 )) ? 2: 3);\n"
+"Language: uk\n"
+
+#. module: l10n_ua_hr_job_classification
+#: model:ir.model.fields,field_description:l10n_ua_hr_job_classification.field_hr_job__l10n_ua_hr_job_company_country_code
+msgid "Company Country Code"
+msgstr "Код країни компанії"
+
+#. module: l10n_ua_hr_job_classification
+#: model_terms:ir.ui.view,arch_db:l10n_ua_hr_job_classification.view_job_filter_l10n_ua
+msgid "Job Classification"
+msgstr "Класифікатор професій"
+
+#. module: l10n_ua_hr_job_classification
+#: model:ir.model.fields,field_description:l10n_ua_hr_job_classification.field_hr_job__l10n_ua_hr_job_classification_id
+msgid "Job Classification (DK 003:2010)"
+msgstr "Класифікатор професій (ДК 003:2010)"
+
+#. module: l10n_ua_hr_job_classification
+#: model:ir.model,name:l10n_ua_hr_job_classification.model_hr_job
+msgid "Job Position"
+msgstr "Посада"
+
+#. module: l10n_ua_hr_job_classification
+#: model:ir.model.fields,help:l10n_ua_hr_job_classification.field_hr_job__l10n_ua_hr_job_classification_id
+msgid ""
+"Official job classification according to the Ukrainian National Classifier "
+"of Occupations DK 003:2010. Used in state HR reports and statistical "
+"filings."
+msgstr ""
+"Офіційна класифікація посади за Українським національним класифікатором "
+"професій ДК 003:2010. Використовується у державних HR-звітах та "
+"статистичних поданнях."
+
+#. module: l10n_ua_hr_job_classification
+#: model:ir.model.fields,help:l10n_ua_hr_job_classification.field_hr_job__l10n_ua_hr_job_company_country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+"Двобуквений ISO-код країни. \n"
+"Може використовуватися для швидкого пошуку."
