@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Add classification to the hr.job form view -->
+    <record id="hr_job_form_l10n_ua" model="ir.ui.view">
+        <field name="name">hr.job.form.l10n.ua</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form" />
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <!--
+                Show the DK 003:2010 classification under the job
+                title, since it is a core structural attribute of
+                the position (used in state HR reports and payroll
+                rules), not a recruitment detail.
+            -->
+            <xpath expr="//sheet/div[hasclass('oe_title')]" position="after">
+                <group name="l10n_ua_hr_job_classification_group">
+                    <field
+                        name="l10n_ua_hr_job_classification_id"
+                        options="{'no_create': True}"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Add classification to the hr.job search view -->
+    <record id="view_job_filter_l10n_ua" model="ir.ui.view">
+        <field name="name">hr.job.search.l10n.ua</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_job_filter" />
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <!--
+                Allow searching jobs by their DK 003:2010
+                classification, and grouping the job list by
+                classification for statistical overviews.
+            -->
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="l10n_ua_hr_job_classification_id" />
+            </xpath>
+            <xpath expr="//filter[@name='employment_type']" position="after">
+                <filter
+                    string="Job Classification"
+                    name="l10n_ua_hr_job_classification"
+                    domain="[]"
+                    context="{'group_by': 'l10n_ua_hr_job_classification_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
