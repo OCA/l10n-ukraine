@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="hr_employee_form_l10n_ua" model="ir.ui.view">
+        <field name="name">hr.employee.form.l10n.ua</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="priority">50</field>
+        <field name="arch" type="xml">
+            <!--
+                Ukrainian identification fields (passport, RNOKPP, EDDR)
+                go next to the standard identification_id. All fields
+                are hidden for non-UA companies.
+
+                The passport series and number are grouped visually as
+                one "Internal passport" block; they are ordinary document
+                fields recorded independently of RNOKPP. The refused flag
+                only hides RNOKPP itself, not the passport.
+            -->
+            <xpath expr="//field[@name='identification_id']" position="after">
+                <label
+                    for="l10n_ua_passport_series"
+                    string="Internal passport (series — number)"
+                    invisible="company_country_code != 'UA'"
+                />
+                <div class="o_row" invisible="company_country_code != 'UA'">
+                    <field
+                        name="l10n_ua_passport_series"
+                        nolabel="1"
+                        placeholder="ЕА"
+                    />
+                    <span>—</span>
+                    <field
+                        name="l10n_ua_passport_number"
+                        nolabel="1"
+                        placeholder="338960"
+                    />
+                </div>
+                <field
+                    name="l10n_ua_rnokpp_refused"
+                    invisible="company_country_code != 'UA'"
+                />
+                <field
+                    name="l10n_ua_rnokpp"
+                    invisible="company_country_code != 'UA' or l10n_ua_rnokpp_refused"
+                />
+                <field
+                    name="l10n_ua_eddr_number"
+                    invisible="company_country_code != 'UA'"
+                />
+            </xpath>
+
+            <!--
+                Disability fields go after the standard Odoo
+                disabled marker. Certificate and review date are
+                only shown when a disability group is set.
+            -->
+            <xpath expr="//field[@name='children']" position="after">
+                <field
+                    name="l10n_ua_disability_group"
+                    invisible="company_country_code != 'UA'"
+                />
+                <field
+                    name="l10n_ua_disability_certificate"
+                    invisible="company_country_code != 'UA' or not l10n_ua_disability_group"
+                />
+                <field
+                    name="l10n_ua_disability_expiry_date"
+                    invisible="company_country_code != 'UA' or not l10n_ua_disability_group"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

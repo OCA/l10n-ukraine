@@ -1,0 +1,192 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_ua_hr_employee_identity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-06 10:59+0000\n"
+"PO-Revision-Date: 2026-08-06 10:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_ua_hr_employee_identity
+#. odoo-python
+#: code:addons/l10n_ua_hr_employee_identity/models/hr_employee.py:0
+msgid "%s: Passport number must be 6 digits."
+msgstr "%s: Номер паспорта має містити 6 цифр."
+
+#. module: l10n_ua_hr_employee_identity
+#. odoo-python
+#: code:addons/l10n_ua_hr_employee_identity/models/hr_employee.py:0
+msgid "%s: Passport series must be 2 letters (e.g. “ЕА”)."
+msgstr "%s: Серія паспорта має містити 2 літери (наприклад «ЕА»)."
+
+#. module: l10n_ua_hr_employee_identity
+#. odoo-python
+#: code:addons/l10n_ua_hr_employee_identity/models/hr_employee.py:0
+msgid "%s: RNOKPP is filled while marked as refused — clear one of them."
+msgstr "%s: РНОКПП заповнено попри позначку про відмову — очистіть одне з полів."
+
+#. module: l10n_ua_hr_employee_identity
+#: model_terms:ir.ui.view,arch_db:l10n_ua_hr_employee_identity.hr_employee_form_l10n_ua
+msgid "<span>—</span>"
+msgstr ""
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,field_description:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_disability_expiry_date
+msgid "Certificate Expiry Date"
+msgstr "Дата закінчення терміну дії свідоцтва"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,help:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_disability_group
+msgid ""
+"Current disability group. Empty means no disability. History of changes is "
+"preserved in the chatter."
+msgstr ""
+"Поточна група інвалідності. Порожнє поле означає відсутність інвалідності. "
+"Історія змін зберігається у чатері."
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,help:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_disability_expiry_date
+msgid ""
+"Date when the disability certificate expires. After this date the employee "
+"must undergo a re-examination by MSEK to renew the certificate or re-"
+"evaluate the disability group."
+msgstr ""
+"Дата, коли статус інвалідності має бути переглянутий МСЕК. Після цієї дати "
+"свідоцтво потрібно оновити або групу інвалідності переоцінити."
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,field_description:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_disability_certificate
+msgid "Disability Certificate"
+msgstr "Свідоцтво про інвалідність"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,field_description:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_disability_group
+msgid "Disability Group"
+msgstr "Група інвалідності"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,field_description:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_eddr_number
+msgid "EDDR Number"
+msgstr "Номер ЄДДР"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model,name:l10n_ua_hr_employee_identity.model_hr_employee
+msgid "Employee"
+msgstr "Співробітник"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields.selection,name:l10n_ua_hr_employee_identity.selection__hr_employee__l10n_ua_disability_group__group1
+msgid "Group I"
+msgstr "I група"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields.selection,name:l10n_ua_hr_employee_identity.selection__hr_employee__l10n_ua_disability_group__group2
+msgid "Group II"
+msgstr "II група"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields.selection,name:l10n_ua_hr_employee_identity.selection__hr_employee__l10n_ua_disability_group__group3
+msgid "Group III"
+msgstr "III група"
+
+#. module: l10n_ua_hr_employee_identity
+#: model_terms:ir.ui.view,arch_db:l10n_ua_hr_employee_identity.hr_employee_form_l10n_ua
+msgid "Internal passport (series — number)"
+msgstr "Внутрішній паспорт (серія — номер)"
+
+#. module: l10n_ua_hr_employee_identity
+#. odoo-python
+#: code:addons/l10n_ua_hr_employee_identity/models/hr_employee.py:0
+msgid ""
+"Invalid RNOKPP “%(v)s” for %(emp)s: check the 10 digits, the check digit, "
+"the encoded date (must match the birthday if set), and the encoded gender "
+"(must match the employee gender if set to male or female)."
+msgstr ""
+"Неправильний РНОКПП «%(v)s» у %(emp)s: перевірте 10 цифр, контрольну цифру, "
+"закодовану дату (має відповідати даті народження, якщо вона вказана) та "
+"закодовану стать (має відповідати статі працівника, якщо вказано «чоловік» "
+"або «жінка»)."
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,help:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_disability_certificate
+msgid ""
+"Number of the disability certificate (МСЕК). Required when the disability "
+"group is set."
+msgstr ""
+"Номер свідоцтва про інвалідність (МСЕК). Обов’язковий, якщо вказано групу "
+"інвалідності."
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,field_description:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_passport_number
+msgid "Passport Number"
+msgstr "Номер паспорта"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,field_description:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_passport_series
+msgid "Passport Series"
+msgstr "Серія паспорта"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,field_description:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_rnokpp
+msgid "RNOKPP"
+msgstr "РНОКПП"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,field_description:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_rnokpp_refused
+msgid "Refused RNOKPP"
+msgstr "Відмова від РНОКПП"
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,help:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_passport_number
+msgid "Six-digit number of the internal passport (booklet). "
+msgstr "Шестизначний номер внутрішнього паспорта-книжечки."
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,help:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_rnokpp
+msgid ""
+"Tax registration number issued by the State Tax Service of Ukraine. Distinct"
+" from the generic Identification No. Required for state reports (1-DF, 413, "
+"Д1) unless the employee has refused it for religious reasons."
+msgstr ""
+"Реєстраційний номер облікової картки платника податків (РНОКПП), виданий ДПС"
+" України. Відрізняється від загального поля «Ідентифікаційний номер». "
+"Обов’язковий для державних звітів (1-ДФ, 413, Д1), окрім випадку відмови з "
+"релігійних мотивів."
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,help:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_rnokpp_refused
+msgid ""
+"The employee has officially declined RNOKPP for religious reasons (with a "
+"corresponding mark in the passport). When set, RNOKPP must be empty; "
+"passport series and number are used instead in state reports."
+msgstr ""
+"Працівник офіційно відмовився від РНОКПП з релігійних мотивів (з відповідною"
+" позначкою в паспорті). Якщо прапорець встановлено, поле РНОКПП має бути "
+"порожнім; у державних звітах використовуються серія та номер паспорта."
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,help:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_passport_series
+msgid "Two-letter series of the internal passport (booklet). "
+msgstr "Двобуквена серія внутрішнього паспорта-книжечки."
+
+#. module: l10n_ua_hr_employee_identity
+#: model:ir.model.fields,help:l10n_ua_hr_employee_identity.field_hr_employee__l10n_ua_eddr_number
+msgid ""
+"Unique record number in the Unified State Demographic Register. Optional — "
+"included in tax reports if available."
+msgstr ""
+"Унікальний реєстраційний номер у Єдиному державному демографічному реєстрі "
+"(ЄДДР). Необов’язковий — включається у податкові звіти, якщо доступний."
+
+#. module: l10n_ua_hr_employee_identity
+#: model_terms:ir.ui.view,arch_db:l10n_ua_hr_employee_identity.hr_employee_form_l10n_ua
+msgid "ЕА"
+msgstr "EA"

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!--
+        Demo data for the Ukrainian HR localization.
+        RNOKPP numbers are fabricated but pass the check-digit
+        validation; they do not correspond to any real person.
+    -->
+
+    <!-- A Ukrainian demo company so that UA-specific fields
+         (hidden when company country != UA) are visible on the
+         demo employees' forms. -->
+    <record id="l10n_ua_demo_company" model="res.company">
+        <field name="name">Демо ФОП Україна</field>
+        <field name="country_id" ref="base.ua" />
+    </record>
+
+    <!-- Grant access to the demo company for the admin user so
+         that it appears in the company switcher out of the box. -->
+    <record id="base.user_admin" model="res.users">
+        <field name="company_ids" eval="[(4, ref('l10n_ua_demo_company'))]" />
+    </record>
+
+    <record id="l10n_ua_demo_employee_kosenko" model="hr.employee">
+        <field name="name">Косенко Дар'я Олегівна</field>
+        <field name="gender">female</field>
+        <field name="company_id" ref="l10n_ua_demo_company" />
+        <field name="l10n_ua_rnokpp">3618745620</field>
+        <field name="l10n_ua_eddr_number">20180412-58201</field>
+    </record>
+
+    <record id="l10n_ua_demo_employee_lysenko" model="hr.employee">
+        <field name="name">Лисенко Віктор Михайлович</field>
+        <field name="gender">male</field>
+        <field name="company_id" ref="l10n_ua_demo_company" />
+        <field name="l10n_ua_rnokpp">2249212318</field>
+        <field name="l10n_ua_disability_group">group2</field>
+        <field name="l10n_ua_disability_certificate">МСЕК АА-123456</field>
+        <field name="l10n_ua_disability_expiry_date">2027-12-31</field>
+    </record>
+</odoo>
